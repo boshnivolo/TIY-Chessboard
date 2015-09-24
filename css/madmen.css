@@ -1,0 +1,24 @@
+.board {
+    border:100px solid lightslategrey;
+    border-collapse:collapse;
+    padding:5px;
+}
+.board th {
+    border:1px solid lightslategrey;
+    padding:5px;
+}
+.board td {
+    border:0px
+    padding:5px;
+ width: 75px;
+ height: 75px;
+}
+.aqua {
+ background-color: aquamarine;
+}
+.sky {
+ background-color: lightskyblue;
+}
+.button {
+   width: 17.41em;  height: 2em;
+ }
