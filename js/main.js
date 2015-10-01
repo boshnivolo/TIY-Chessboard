@@ -20,6 +20,9 @@
    */
   var moves = [
     // TODO: Fill me in!
+    [63,43], [06,25], [62,42],
+    [14,24], [66,56], [13,33],
+    [75,66], [05,14], [76,55];
   ]; // END moves
 
   // var current; TODO: do we need this?
@@ -105,7 +108,7 @@
      *
      * @todo Fill me in! ...and remove this comment.
      */
-    function applyMove(positionFrom, positionTo){
+    function applyMove(from, to){
       var forRowNum = Math.floor(positionFrom/10);
       var forColNum = positionFrom % 10;
       var piece = board[forRowNum][forColNum];
