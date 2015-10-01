@@ -47,3 +47,12 @@ it('should return to starting position when reset', function(){
   chai.expect(gb).to.be.an('array');
   chai.expect(gb).length(64);
 });
+
+it('should applyMove after next is clicked', function(){
+  var current = game.board([ ][ ])
+  game.next(
+    applyMove(current);
+  );
+
+  chai.expect(current).to.be('object');
+});
