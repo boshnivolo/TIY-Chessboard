@@ -25,7 +25,7 @@
     [75,66], [05,14], [76,55];
   ]; // END moves
 
-  // var current; TODO: do we need this?
+  var current
 
   // You don't need to understand `globals` yet...
   var game = globals.game = {
@@ -116,15 +116,6 @@
     } // END applyMove
   }; // END game
 
-  applyMove(63,43);
-  applyMove(06,25);
-  applyMove(62,42);
-  applyMove(14,24);
-  applyMove(66,56);
-  applyMove(13,33);
-  applyMove(75,66);
-  applyMove(05,14);
-  applyMove(76,55);
   /**
    * Provide the initial state of the game board, useful for any game.
    *
