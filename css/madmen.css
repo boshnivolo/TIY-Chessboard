@@ -1,24 +1,86 @@
+main.container {
+  margin: 0 10%;
+}
+table {
+  width:100%;
+  border-collapse: collapse;
+}
+.numbers {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 .board {
-    border:100px solid lightslategrey;
     border-collapse:collapse;
     padding:5px;
 }
-.board th {
-    border:1px solid lightslategrey;
-    padding:5px;
+.wR::before {
+  content: "\2656";
+  position: absolute;
 }
-.board td {
-    border:0px
-    padding:5px;
- width: 75px;
- height: 75px;
+.wN::before {
+  content: "\2658";
+  position: absolute;
+}
+.wB::before {
+  content: "\2657";
+  position: absolute;
+}
+.wQ::before {
+  content: "\2654";
+  position: absolute;
+}
+.wK::before {
+  content: "\2655";
+  position: absolute;
+}
+.wP::before {
+  content: "\2659";
+  position: absolute;
+}
+.bR::before {
+  content: "\265c";
+  position: absolute;
+}
+.bN::before {
+  content: "\265e";
+  position: absolute;
+}
+.bB::before {
+  content: "\265d";
+  position: absolute;
+}
+.bK::before {
+  content: "\265b";
+  position: absolute;
+}
+.bQ::before {
+  content: "\265a";
+  position: absolute;
+}
+.bP::before {
+  content: "\265f";
+  position: absolute;
+}
+td {
+    border:0.1em solid darkgray;
+    width:10%;
+    padding-bottom: 10%;
 }
 .aqua {
  background-color: aquamarine;
+ font-size: 5vw;
+ padding-left: 1vw;
 }
 .sky {
  background-color: lightskyblue;
+ font-size: 5vw;
+ padding-left: 1vw;
 }
 .button {
-   width: 17.41em;  height: 2em;
- }
+   width: 7vw;
+   color: aquamarine;
+   font-size: 3vw;
+   margin: 6%;
+   background-color: darkgray;
+   border: 0.1em solid lightskyblue;
+}
