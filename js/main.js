@@ -115,16 +115,6 @@
         board[forRowNum][forColNum];
     } // END applyMove
   }; // END game
-
-  applyMove(63,43);
-  applyMove(06,25);
-  applyMove(62,42);
-  applyMove(14,24);
-  applyMove(66,56);
-  applyMove(13,33);
-  applyMove(75,66);
-  applyMove(05,14);
-  applyMove(76,55);
   /**
    * Provide the initial state of the game board, useful for any game.
    *
