@@ -3,49 +3,52 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/madmen.css">
-    <script src="js/main.js"</script>
       <link rel="text" href="tests.html">
       <script src="tests.js"</script>
+      <script src="js/main.js"</script>
     <title>Chessboard</title>
   </head>
   <body>
+    <main class="container">
     <table class="board">
     <caption><h1>Wizard Chess</h1></caption>
     <thead>
       <tr>
-        <th>Markers</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
+        <th></th>
+        <th class="numbers">1</th>
+        <th class="numbers">2</th>
+        <th class="numbers">3</th>
+        <th class="numbers">4</th>
+        <th class="numbers">5</th>
+        <th class="numbers">6</th>
+        <th class="numbers">7</th>
+        <th class="numbers">8</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th>A</th>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
+        <td class="aqua wR"></td>
+        <td class="sky wN"></td>
+        <td class="aqua wB"></td>
+        <td class="sky wQ"></td>
+        <td class="aqua wK"></td>
+        <td class="sky wB"></td>
+        <td class="aqua wN"></td>
+        <td class="sky wR"></td>
+        <th>A</th>
       </tr>
       <tr>
         <th>B</th>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
+        <td class="sky wP"></td>
+        <td class="aqua wP"></td>
+        <td class="sky wP"></td>
+        <td class="aqua wP"></td>
+        <td class="sky wP"></td>
+        <td class="aqua wP"></td>
+        <td class="sky wP"></td>
+        <td class="aqua wP"></td>
+        <th>B</th>
       </tr>
       <tr>
         <th>C</th>
@@ -57,6 +60,7 @@
         <td class="sky"></td>
         <td class="aqua"></td>
         <td class="sky"></td>
+        <th>C</th>
       </tr>
       <tr>
         <th>D</th>
@@ -68,6 +72,7 @@
         <td class="aqua"></td>
         <td class="sky"></td>
         <td class="aqua"></td>
+        <th>D</th>
       </tr>
       <tr>
         <th>E</th>
@@ -79,6 +84,7 @@
         <td class="sky"></td>
         <td class="aqua"></td>
         <td class="sky"></td>
+        <th>E</th>
       </tr>
       <tr>
         <th>F</th>
@@ -90,36 +96,51 @@
         <td class="aqua"></td>
         <td class="sky"></td>
         <td class="aqua"></td>
+        <th>F</th>
       </tr>
       <tr>
         <th>G</th>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
+        <td class="aqua bP"></td>
+        <td class="sky bP"></td>
+        <td class="aqua bP"></td>
+        <td class="sky bP"></td>
+        <td class="aqua bP"></td>
+        <td class="sky bP"></td>
+        <td class="aqua bP"></td>
+        <td class="sky bP"></td>
+        <th>G</th>
       </tr>
       <tr>
         <th>H</th>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
-        <td class="sky"></td>
-        <td class="aqua"></td>
+        <td class="sky bR"></td>
+        <td class="aqua bN"></td>
+        <td class="sky bB"></td>
+        <td class="aqua bK"></td>
+        <td class="sky bQ"></td>
+        <td class="aqua bB"></td>
+        <td class="sky bN"></td>
+        <td class="aqua bR"></td>
+        <th>H</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th class="numbers">1</th>
+        <th class="numbers">2</th>
+        <th class="numbers">3</th>
+        <th class="numbers">4</th>
+        <th class="numbers">5</th>
+        <th class="numbers">6</th>
+        <th class="numbers">7</th>
+        <th class="numbers">8</th>
       </tr>
     </tbody>
     </table>
-<button class="button" id="rewind" type="button">Rewind</button>
-<button class="button" id="step_back" type="button">Step Back</button>
-<button class="button" id="play_pause" type="button">Play/Pause</button>
-<button class="button" id="step_foward" type="button">Step Forward</button>
-<button class="button" id="fast_foward" type="button">Fast Forward</button>
+  </main>
+<button class="button" id="rewind" type="button">&#8606;</button>
+<button class="button" id="step_back" type="button">&#8592;</button>
+<button class="button" id="play_pause" type="button">&#9655;</button>
+<button class="button" id="step_foward" type="button">&#8594;</button>
+<button class="button" id="fast_foward" type="button">&#8608;</button>
 
 
   </body>
