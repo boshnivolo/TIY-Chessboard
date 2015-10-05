@@ -10,7 +10,7 @@
    * @var {Array} of {Array} of {String|null}
    */
 
-  var current = 0; 
+  var current = 0;
 
   var board = initial(); // initialize the `board`
 
@@ -82,7 +82,7 @@
      * @todo Make this work!
      */
     end: function(){
-      // Write some code here...
+      applyMove(moves[9]);
       return this;
     },
     /**
@@ -108,12 +108,12 @@
   }; // END game
 
   function applyMove(from, to){
-    var forRowNum = Math.floor(positionFrom/10);
-      var forColNum = positionFrom % 10;
+    var forRowNum = Math.floor(from/10);
+      var forColNum = from % 10;
       var piece = board[forRowNum][forColNum];
       board[forRowNum][forColNum] = null;
-      var toRowNum = Math.floor(positionTo/10);
-      var toColNum = positionTo % 10;
+      var toRowNum = Math.floor(to/10);
+      var toColNum = to % 10;
 	  board[toRowNum][toColNum] = piece;
 
 }  /**

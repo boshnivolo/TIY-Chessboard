@@ -7,36 +7,44 @@
    * 3. What `CALLBACK` should be run when the interaction happens?
    * 4. What should my `CALLBACK` do with it's `EVENT`...?
    */
-  document.querySelector(SELECTOR)
-    .addEventListener(TYPE, CALLBACK);
-  // AKA
-  jQuery(SELECTOR).on(TYPE, CALLBACK);
-  // Where CALLBACK is...
-  function CALLBACK (EVENT){
-    // Do something with Models and Views...
-    // Maybe do something with EVENT...?
-  }
+var $board = $('.board tbody');
+
+var gameboard = game.board();
+
+var current = 0;
+
+  // document.querySelector(SELECTOR)
+  //   .addEventListener(TYPE, CALLBACK);
+  // // AKA
+  // jQuery(SELECTOR).on(TYPE, CALLBACK);
+  // // Where CALLBACK is...
+  // function CALLBACK (EVENT){
+  //   // Do something with Models and Views...
+  //   // Maybe do something with EVENT...?
+  // }
 
 
   // Controller for "next move"...
-  jQuery(".step_forward").on('click', function(event){
-    // TODO: Fire tracer bullet!
-    // TODO: Tell the Model -- `game` -- to advance to the next move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+  jQuery("#step_forward").on('click', function(event){
+    game.next();
+    update.view();
   });
 
   // Controller for "previous move"...
-  jQuery(".step_back").on('click', function(event){
-    // TODO: Fire tracer bullet!
-    // TODO: Tell the Model -- `game` -- to advance to the previous move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+  jQuery("#step_back").on('click', function(event){
+    game.prev();
+    update.view();
   });
 
   // Controller for "fast-forward"...
-  jQuery(".fast_forward").on('click', function(event){
-    // TODO: Fire tracer bullet!
-    // TODO: Tell the Model -- `game` -- to advance to the last move...
-    // TODO: Tell the View -- `.chessboard` -- to update the position of the pieces based on `game.board()`
+  jQuery("#fast_forward").on('click', function(event){
+    game.end();
+    update.view();
+  });
+
+  $("#rewind").on(.'click', function(event){
+    game.reset();
+    update.view();
   });
 
   // Controller for anything else...
