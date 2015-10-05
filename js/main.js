@@ -9,6 +9,9 @@
    * @see initial
    * @var {Array} of {Array} of {String|null}
    */
+
+  var current = 0; 
+
   var board = initial(); // initialize the `board`
 
   /**
@@ -19,13 +22,11 @@
    * @var {Array} of...?
    */
   var moves = [
-    // TODO: Fill me in!
     [63,43], [06,25], [62,42],
     [14,24], [66,56], [13,33],
-    [75,66], [05,14], [76,55];
+    [75,66], [05,14], [76,55]
   ]; // END moves
 
-  var current
 
   // You don't need to understand `globals` yet...
   var game = globals.game = {
@@ -56,6 +57,8 @@
      * @todo Make this work!
      */
     next: function(){
+      applyMove(moves[current][0],
+        moves[current++][1]);
 
       return this;
     },
@@ -66,7 +69,10 @@
      * @todo Make this work!
      */
     prev: function(){
-      // Another good place for code...
+      current--;
+      var fromPrev = moves[current][0];
+      var toPrev = moves[current][1];
+      applyMove(toPrev, fromPrev);
       return this;
     },
     /**
@@ -85,38 +91,32 @@
      * @return {String} representation of `board`
      * @todo Refactor to use Array methods?
      */
-    tracer: function(){
-      var bullet = '';
+    // tracer: function(){
+    //   var bullet = '';
+    //
+    //   for ( var rank = 0; rank < board.length; rank++ ){
+    //     bullet += '|';
+    //     for ( var file = 0; file < board[rank].length; file++ ){
+    //       bullet += board[rank][file] || ' |';
+    //     }
+    //     bullet += '\n';
+    //   }
+    //
+    //   return bullet;
+    // },
 
-      for ( var rank = 0; rank < board.length; rank++ ){
-        bullet += '|';
-        for ( var file = 0; file < board[rank].length; file++ ){
-          bullet += board[rank][file] || ' |';
-        }
-        bullet += '\n';
-      }
-
-      return bullet;
-    },
-    /**
-     * Apply a move to the game board, given a `from` and `to` position that both
-     * contain values for `rank` and `file`.
-     *
-     * @param {Object} from with `rank` and `file`
-     * @param {Object} to with `rank` and `file`
-     * @return undefined
-     *
-     * @todo Fill me in! ...and remove this comment.
-     */
-    function applyMove(from, to){
-      var forRowNum = Math.floor(positionFrom/10);
-      var forColNum = positionFrom % 10;
-      var piece = board[forRowNum][forColNum];
-        board[forRowNum][forColNum];
-    } // END applyMove
   }; // END game
 
-  /**
+  function applyMove(from, to){
+    var forRowNum = Math.floor(positionFrom/10);
+      var forColNum = positionFrom % 10;
+      var piece = board[forRowNum][forColNum];
+      board[forRowNum][forColNum] = null;
+      var toRowNum = Math.floor(positionTo/10);
+      var toColNum = positionTo % 10;
+	  board[toRowNum][toColNum] = piece;
+
+}  /**
    * Provide the initial state of the game board, useful for any game.
    *
    * @return {Array} of {Array} of {String|null}
@@ -133,6 +133,7 @@
       [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r' ],
     ];
   } // END initial
+
 
 // You are not expected to understand anything below this line...
 })(window || module && module.exports || this);
