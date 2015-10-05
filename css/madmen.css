@@ -1,3 +1,16 @@
+body {
+  background-image: url(http://images.uncyc.org/ja/7/71/Chess-cat.jpg);
+  border: 1vw solid darkgrey;
+}
+caption {
+  font-family: fantasy;
+  color: hotpink;
+}
+th {
+  color: hotpink;
+  font-family: fantasy;
+  font-style: bold;
+}
 main.container {
   margin: 0 10%;
 }
