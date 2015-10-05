@@ -42,7 +42,7 @@ var current = 0;
     update.view();
   });
 
-  $("#rewind").on(.'click', function(event){
+  jQuery("#rewind").on(.'click', function(event){
     game.reset();
     update.view();
   });
